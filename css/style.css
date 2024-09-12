@@ -1,0 +1,189 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-image: url(../assets/pawel-czerwinski-4B3m1zRofV8-unsplash.jpg);
+}
+
+/*Header*/
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logoContainer img {
+    max-width: 100%;
+    height: 300px;
+    text-align: center;
+}
+
+.menu {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+}
+
+.menu li {
+    padding: 15px 20px;
+    color: white;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+v c
+
+h1 {
+    text-align: center;
+    font-weight: 500;
+    font-size: calc(1.375rem + 1.5vw);
+}
+
+h2 {
+    text-align: center;
+}
+
+/*Aca empieza section de tortas*/
+.content-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.text-boton {
+    flex: 1;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.text-boton p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.text-boton input {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.text-boton input:hover {
+    background-color: #ccc;
+}
+
+.imagen-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 15px;
+    flex: 1;
+    box-shadow: 0px 0px 10px black;
+}
+
+.imagen-grid img {
+    width: 100%;
+    height: 500px;
+    border-radius: 5px;
+}
+
+/*Section  de caterings*/
+.imagen-grid-dos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    flex: 1;
+}
+
+.imagen-grid-dos img {
+    width: 100%;
+    height: 500px;
+    border-radius: 5px;
+}
+
+
+
+
+@media (max-width: 992px) {
+
+    .menu {
+        display: none;
+    }
+
+    .content-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-boton {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .imagen-grid, .imagen-grid-dos {
+        grid-template-columns: 1fr;
+    }
+
+    .imagen-grid img, .imagen-grid-dos img {
+        height: auto;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li {
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Ajustes para móviles */
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .text-boton p {
+        font-size: 16px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu li {
+        padding: 10px 0;
+        font-size: 16px;
+    }
+
+    .logoContainer img {
+        height: 200px;
+    }
+
+    .imagen-grid img, .imagen-grid-dos img {
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+
+    .text-boton input {
+        width: 100%; /* Botones de ancho completo */
+        font-size: 14px;
+    }
+}
