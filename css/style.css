@@ -1,189 +1,349 @@
+@charset "UTF-8";
 body {
-    margin: 0;
-    font-family: sans-serif;
-    background-image: url(../assets/pawel-czerwinski-4B3m1zRofV8-unsplash.jpg);
+  margin: 0;
+  font-family: sans-serif;
+  background-image: url(../assets/pawel-czerwinski-4B3m1zRofV8-unsplash.jpg);
 }
 
 /*Header*/
 header {
-    text-align: center;
-    padding: 20px 0;
+  text-align: center;
+  padding: 20px 0;
 }
 
 .logoContainer img {
-    max-width: 100%;
-    height: 300px;
-    text-align: center;
+  max-width: 100%;
+  height: 300px;
+  text-align: center;
 }
 
 .menu {
-    margin: 30px;
-    display: flex;
-    justify-content: center;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 .menu ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
 }
 
 .menu li {
-    padding: 15px 20px;
-    color: white;
+  padding: 15px 20px;
+  color: white;
 }
 
 .menu a {
-    text-decoration: none;
-    color: #000;
-    font-size: 20px;
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
 }
-v c
 
-h1 {
-    text-align: center;
-    font-weight: 500;
-    font-size: calc(1.375rem + 1.5vw);
+v c h1 {
+  text-align: center;
+  font-weight: 500;
+  font-size: calc(1.375rem + 1.5vw);
 }
 
 h2 {
-    text-align: center;
+  text-align: center;
 }
 
 /*Aca empieza section de tortas*/
 .content-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .text-boton {
-    flex: 1;
-    margin-right: 20px;
-    text-align: center;
+  flex: 1;
+  margin-right: 20px;
+  text-align: center;
 }
 
 .text-boton p {
-    font-size: 20px;
-    margin-bottom: 10px;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 .text-boton input {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    background-color: black;
-    color: white;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
 .text-boton input:hover {
-    background-color: #ccc;
+  background-color: #ccc;
 }
 
 .imagen-grid {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-gap: 15px;
-    flex: 1;
-    box-shadow: 0px 0px 10px black;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+  flex: 1;
+  box-shadow: 0px 0px 10px black;
 }
 
 .imagen-grid img {
-    width: 100%;
-    height: 500px;
-    border-radius: 5px;
+  width: 100%;
+  height: 500px;
+  border-radius: 5px;
 }
 
 /*Section  de caterings*/
 .imagen-grid-dos {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-    flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  flex: 1;
 }
 
 .imagen-grid-dos img {
-    width: 100%;
-    height: 500px;
-    border-radius: 5px;
+  width: 100%;
+  height: 500px;
+  border-radius: 5px;
 }
 
+.contenedor-desayuno {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
+.contenedor-desayuno .text-boton {
+  flex: 1;
+  max-width: 50%;
+  text-align: left;
+}
 
+.contenedor-desayuno .text-boton h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.contenedor-desayuno .text-boton p {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.contenedor-desayuno .text-boton a {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.contenedor-desayuno .text-boton input {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.contenedor-desayuno .text-boton input:hover {
+  background-color: #ccc;
+}
+
+.contenedor-desayuno .imagen-desayuno-i {
+  flex: 1;
+  max-width: 50%;
+}
+
+.contenedor-desayuno .imagen-desayuno-i img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.comments-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Estilo para la caja de comentarios */
+.comments {
+  flex: 1;
+  max-width: 500px; /* Ajusta según tu diseño */
+  box-sizing: border-box;
+}
+
+/* Estilo para el mapa */
+.map {
+  flex: 2;
+  max-width: 600px; /* Ajusta según tu diseño */
+  box-sizing: border-box;
+}
+
+/* Asegúrate de que el iframe ocupe el 100% del ancho del contenedor */
+.map iframe {
+  width: 100%;
+  height: 400px; /* Ajusta la altura según tu diseño */
+  border: none;
+}
+
+/* Estilo para el formulario de comentarios */
+.comments form {
+  display: flex;
+  flex-direction: column;
+}
+
+.comments textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+.comments button {
+  align-self: flex-start;
+  padding: 10px 20px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.comments button:hover {
+  background-color: #555;
+}
+
+/* Estilos para la sección de comentarios */
+.comments-section {
+  padding: 20px;
+}
+
+.comments-container {
+  display: flex;
+  gap: 20px; /* Espacio entre el iframe y la caja de comentarios */
+  align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas más pequeñas */
+}
+
+.comments-container iframe {
+  width: 60%; /* Ajusta el ancho del iframe */
+  height: 400px; /* Ajusta la altura del iframe */
+  border: 0;
+}
+
+.comments-box {
+  flex: 1; /* La caja de comentarios tomará el espacio restante */
+  background-color: #f1f1f1; /* Color de fondo opcional */
+  padding: 20px;
+  border-radius: 8px; /* Bordes redondeados opcional */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+}
+
+/* Footer styles */
+footer {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.footer-logo img {
+  max-width: 150px;
+  height: auto;
+}
+
+.footer-contact p {
+  margin: 5px 0;
+}
+
+.footer-contact a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
 
 @media (max-width: 992px) {
-
-    .menu {
-        display: none;
-    }
-
-    .content-section {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .text-boton {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
-    .imagen-grid, .imagen-grid-dos {
-        grid-template-columns: 1fr;
-    }
-
-    .imagen-grid img, .imagen-grid-dos img {
-        height: auto;
-    }
-
-    .menu ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .menu li {
-        padding: 10px 0;
-    }
+  .imagen-grid, .imagen-grid-dos {
+    grid-template-columns: 1fr;
+  }
+  .footer-container {
+    padding: 20px 40px; /* Increase padding for larger screens */
+  }
+  .footer-logo img {
+    max-width: 150px; /* Larger logo size for larger screens */
+  }
 }
-
+@media (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+  nav.menu ul li {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .comments-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .comments-container iframe {
+    width: 100%;
+    height: auto;
+  }
+  .comments-box {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .footer-container {
+    flex-direction: row; /* Change to row direction for larger screens */
+    justify-content: space-between; /* Spread items across the footer */
+    text-align: left; /* Align text to the left for larger screens */
+  }
+  .footer-logo img {
+    max-width: 120px; /* Adjust logo size if necessary */
+  }
+}
 @media (max-width: 576px) {
-    /* Ajustes para móviles */
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    .text-boton p {
-        font-size: 16px;
-    }
-
-    .menu ul {
-        flex-direction: column;
-        padding: 0;
-        margin: 0;
-    }
-
-    .menu li {
-        padding: 10px 0;
-        font-size: 16px;
-    }
-
-    .logoContainer img {
-        height: 200px;
-    }
-
-    .imagen-grid img, .imagen-grid-dos img {
-        height: auto; /* Ajusta la altura automáticamente */
-    }
-
-    .text-boton input {
-        width: 100%; /* Botones de ancho completo */
-        font-size: 14px;
-    }
+  .comments-box textarea {
+    height: 100px;
+  }
+  .comments-box button {
+    padding: 8px 16px;
+  }
+  .footer-container {
+    flex-direction: column; /* Stack items vertically */
+    gap: 15px; /* Reduce gap between items */
+  }
+  .footer-logo img {
+    max-width: 100px; /* Reduce logo size for small screens */
+  }
 }
+
+/*# sourceMappingURL=style.css.map */
