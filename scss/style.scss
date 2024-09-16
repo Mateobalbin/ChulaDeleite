@@ -173,6 +173,182 @@ h2 {
     border-radius: 5px;
 }
 
+//Desayunos y meriendas
+
+.main-desayuno {
+    padding: 20px;
+
+    .sectiondesayuno {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+  
+      & > div {
+        flex: 1;
+        margin-right: 20px;
+  
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 5px;
+        }
+      }
+  
+      p {
+        flex: 2;
+        font-size: 20px;
+        margin: 0;
+      }
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .main-desayuno {
+      padding: 15px;
+    }
+  
+    .sectiondesayuno {
+      flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+      align-items: flex-start;
+  
+      & > div {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+  
+      p {
+        font-size: 18px; /* Ajusta el tamaño de la fuente */
+      }
+    }
+  }
+  
+//Media queries desayunos
+
+  @media (max-width: 768px) {
+    .main-desayuno {
+      padding: 10px;
+    }
+  
+    .sectiondesayuno {
+      & > div {
+        margin-bottom: 10px;
+      }
+  
+      p {
+        font-size: 16px; /* Ajusta aún más el tamaño de la fuente */
+      }
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .main-desayuno {
+      padding: 5px;
+    }
+  
+    .sectiondesayuno {
+      & > div {
+        margin-bottom: 5px;
+      }
+  
+      p {
+        font-size: 14px; /* Tamaño de fuente para pantallas muy pequeñas */
+      }
+    }
+  }
+
+  //Catering
+
+  .container-catering, .conteiner-catering {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+
+    & > .containerimg-c {
+        display: flex;
+        flex: 1;
+        margin-right: 20px;
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            max-height: 300px;  // Ajusta la altura máxima para que no sea tan grande
+            object-fit: cover;  // Asegura que la imagen cubra el área sin distorsionarse
+        }
+    }
+
+    .texto-catering {
+        flex: 1;
+        font-size: 18px;
+        margin: 0;
+        line-height: 1.5;
+    }
+}
+
+//Media queries catering
+
+@media (max-width: 992px) {
+    main {
+        padding: 15px;
+
+        .container-catering, .conteiner-catering {
+            flex-direction: column;  // Cambia a columna en pantallas más pequeñas
+            align-items: flex-start;
+
+            & > .containerimg-c {
+                margin-right: 0;
+                margin-bottom: 15px;
+
+                img {
+                    max-height: 200px;  // Ajusta la altura máxima en pantallas más pequeñas
+                }
+            }
+
+            .texto-catering {
+                font-size: 16px;  // Ajusta el tamaño de la fuente
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+
+        .container-catering, .conteiner-catering {
+            & > .containerimg-c img {
+                max-height: 150px;  // Ajusta la altura máxima en pantallas aún más pequeñas
+            }
+
+            .texto-catering {
+                font-size: 14px;  // Ajusta el tamaño de la fuente
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    main {
+        padding: 5px;
+
+        .container-catering, .conteiner-catering {
+            & > .containerimg-c img {
+                max-height: 100px;  // Ajusta la altura máxima en pantallas muy pequeñas
+            }
+
+            .texto-catering {
+                font-size: 12px;  // Tamaño de fuente para pantallas muy pequeñas
+            }
+        }
+    }
+}
+
+
+//Iframe y caja de coemntarios
+
 .comments-container {
     display: flex;
     flex-wrap: wrap;
@@ -257,7 +433,8 @@ h2 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
-/* Footer styles */
+//Footer
+
 footer {
     background-color: #f8f9fa;
     padding: 20px;
@@ -291,6 +468,7 @@ footer {
     text-decoration: underline;
 }
 
+//Media queries footer
 
 @media (max-width: 992px) {
     .imagen-grid, .imagen-grid-dos {
