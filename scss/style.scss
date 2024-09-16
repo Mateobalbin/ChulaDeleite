@@ -1,6 +1,8 @@
+@import "_variables";
+
 body {
     margin: 0;
-    font-family: sans-serif;
+    font-family: $tipografia;
     background-image: url(../assets/pawel-czerwinski-4B3m1zRofV8-unsplash.jpg);
     overflow-x: hidden;
 }
@@ -80,7 +82,7 @@ h2 {
     font-size: 16px;
     cursor: pointer;
     border: none;
-    background-color: black;
+    background-color: $colortexto;
     color: white;
     border-radius: 5px;
     transition: background-color 0.3s;
@@ -104,7 +106,7 @@ h2 {
     border-radius: 5px;
 }
 
-/*Section  de caterings*/
+//Seccion de catering
 .imagen-grid-dos {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -154,7 +156,7 @@ h2 {
     font-size: 16px;
     cursor: pointer;
     border: none;
-    background-color: black;
+    background-color: $colortexto ;
     color: white;
     border-radius: 5px;
     transition: background-color 0.3s;
@@ -401,7 +403,7 @@ h2 {
     font-size: 16px;
     cursor: pointer;
     border: none;
-    background-color: black;
+    background-color: $colortexto;
     color: white;
     border-radius: 5px;
     transition: background-color 0.3s;

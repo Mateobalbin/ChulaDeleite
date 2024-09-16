@@ -85,7 +85,6 @@ h2 {
   height: 500px;
   border-radius: 5px; }
 
-/*Section  de caterings*/
 .imagen-grid-dos {
   display: grid;
   grid-template-columns: 1fr 1fr;
