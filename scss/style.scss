@@ -260,7 +260,7 @@ h2 {
     }
   
     .sectiondesayuno {
-      flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+      flex-direction: column; 
       align-items: flex-start;
   
       & > div {
@@ -269,7 +269,7 @@ h2 {
       }
   
       p {
-        font-size: 18px; /* Ajusta el tamaño de la fuente */
+        font-size: 18px; 
       }
     }
   }
@@ -287,7 +287,7 @@ h2 {
       }
   
       p {
-        font-size: 16px; /* Ajusta aún más el tamaño de la fuente */
+        font-size: 16px; 
       }
     }
   }
@@ -303,7 +303,7 @@ h2 {
       }
   
       p {
-        font-size: 14px; /* Tamaño de fuente para pantallas muy pequeñas */
+        font-size: 14px; 
       }
     }
   }
@@ -325,8 +325,8 @@ h2 {
             width: 100%;
             height: auto;
             border-radius: 5px;
-            max-height: 300px;  // Ajusta la altura máxima para que no sea tan grande
-            object-fit: cover;  // Asegura que la imagen cubra el área sin distorsionarse
+            max-height: 300px;  
+            object-fit: cover;  
         }
     }
 
@@ -345,7 +345,7 @@ h2 {
         padding: 15px;
 
         .container-catering, .conteiner-catering {
-            flex-direction: column;  // Cambia a columna en pantallas más pequeñas
+            flex-direction: column;  
             align-items: flex-start;
 
             & > .containerimg-c {
@@ -353,12 +353,12 @@ h2 {
                 margin-bottom: 15px;
 
                 img {
-                    max-height: 200px;  // Ajusta la altura máxima en pantallas más pequeñas
+                    max-height: 200px;  
                 }
             }
 
             .texto-catering {
-                font-size: 16px;  // Ajusta el tamaño de la fuente
+                font-size: 16px;  
             }
         }
     }
@@ -370,11 +370,11 @@ h2 {
 
         .container-catering, .conteiner-catering {
             & > .containerimg-c img {
-                max-height: 150px;  // Ajusta la altura máxima en pantallas aún más pequeñas
+                max-height: 150px;  
             }
 
             .texto-catering {
-                font-size: 14px;  // Ajusta el tamaño de la fuente
+                font-size: 14px;  
             }
         }
     }
@@ -386,11 +386,11 @@ h2 {
 
         .container-catering, .conteiner-catering {
             & > .containerimg-c img {
-                max-height: 100px;  // Ajusta la altura máxima en pantallas muy pequeñas
+                max-height: 100px; 
             }
 
             .texto-catering {
-                font-size: 12px;  // Tamaño de fuente para pantallas muy pequeñas
+                font-size: 12px;  
             }
         }
     }

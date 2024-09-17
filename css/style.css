@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   margin: 0;
   font-family: sans-serif;
@@ -235,7 +234,7 @@ h2 {
     padding: 15px;
   }
   .sectiondesayuno {
-    flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+    flex-direction: column;
     align-items: flex-start;
   }
   .sectiondesayuno > div {
@@ -243,7 +242,7 @@ h2 {
     margin-bottom: 15px;
   }
   .sectiondesayuno p {
-    font-size: 18px; /* Ajusta el tamaño de la fuente */
+    font-size: 18px;
   }
 }
 @media (max-width: 768px) {
@@ -254,7 +253,7 @@ h2 {
     margin-bottom: 10px;
   }
   .sectiondesayuno p {
-    font-size: 16px; /* Ajusta aún más el tamaño de la fuente */
+    font-size: 16px;
   }
 }
 @media (max-width: 576px) {
@@ -265,7 +264,7 @@ h2 {
     margin-bottom: 5px;
   }
   .sectiondesayuno p {
-    font-size: 14px; /* Tamaño de fuente para pantallas muy pequeñas */
+    font-size: 14px;
   }
 }
 .container-catering, .conteiner-catering {
