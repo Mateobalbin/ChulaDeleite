@@ -45,7 +45,7 @@ header {
     color: #000;
     font-size: 20px;
 }
-v c
+
 
 h1 {
     text-align: center;
@@ -57,6 +57,52 @@ h2 {
     text-align: center;
 }
 
+//Media queries para el menu de tortas, lo demas lo realice con bootstrap
+@media (max-width: 1024px) {
+    .menu ul {
+        flex-direction: row; /* Alinea los elementos en fila */
+    }
+
+    .menu li {
+        padding: 10px 15px; /* Ajusta el padding */
+    }
+
+    .menu a {
+        font-size: 18px; /* Ajusta el tamaño del texto */
+    }
+}
+
+@media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column; /* Cambia la dirección a columna en pantallas más pequeñas */
+    }
+
+    .menu li {
+        padding: 10px 0; /* Ajusta el padding */
+    }
+
+    .menu a {
+        font-size: 16px; /* Ajusta el tamaño del texto */
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        margin: 15px; /* Ajusta el margen para pantallas más pequeñas */
+    }
+
+    .menu ul {
+        flex-direction: column; /* Asegura la disposición vertical */
+    }
+
+    .menu li {
+        padding: 8px 0; /* Ajusta el padding */
+    }
+
+    .menu a {
+        font-size: 14px; /* Ajusta el tamaño del texto */
+    }
+}
 
 .content-section {
     display: flex;
