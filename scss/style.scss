@@ -98,6 +98,65 @@ body {
     height: 500px;
     border-radius: 5px;
   }
+
+  .comments-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+
+    .comments-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+
+        iframe, 
+        .comments-box {
+            width: 50%;
+            height: 300px;
+        }
+
+        iframe {
+            border: none;
+        }
+
+        .comments-box {
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                margin-bottom: 10px;
+                text-align: center;
+            }
+
+            textarea {
+                width: 100%;
+                height: 100%;
+                margin-bottom: 10px;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-sizing: border-box;
+                resize: none;
+            }
+
+            button {
+                width: 100%; // Ajusta el ancho del botón
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                background-color: #0a3622;
+                color: white;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
   
   // Sección de catering
   .imagen-grid-dos {
@@ -248,126 +307,173 @@ body {
   }
   
   // Catering
-  .container-catering, .conteiner-catering {
-    @include flex-center(row, flex-start, center);
+  .container-catering {
+    display: flex;
+    align-items: center;
     margin-bottom: 20px;
-    box-sizing: border-box;
-  
-    & > .containerimg-c {
-      @include flex-center(row, flex-start, center);
-      flex: 1;
-      margin-right: 20px;
-  
-      img {
+
+    .catering-content {
+        display: flex;
+        align-items: flex-start;
         width: 100%;
-        height: auto;
-        border-radius: 5px;
-        max-height: 300px;
-        object-fit: cover;
-      }
+
+        .containerimg-c {
+            display: flex;
+            img {
+                width: 300px;
+                height: auto;
+                margin-right: 10px;
+            }
+        }
+
+        .texto-catering {
+            flex: 1;
+            text-align: center;
+            font-size: 25px;
+        }
     }
-  
-    .texto-catering {
-      flex: 1;
-      @include responsive-font(18px, 22px);
-      margin: 0;
-      line-height: 1.5;
-    }
-  }
+}
+
   
   // Media queries catering
   @media (max-width: 992px) {
-    main {
-      padding: 15px;
-  
-      .container-catering, .conteiner-catering {
-        @include flex-center(column, flex-start, flex-start);
-  
-        & > .containerimg-c {
-          margin-right: 0;
-          margin-bottom: 15px;
-  
-          img {
-            max-height: 200px;
-          }
+    .container-catering {
+        .catering-content {
+            .containerimg-c {
+                img {
+                    width: 250px;
+                }
+            }
+
+            .texto-catering {
+                font-size: 22px;
+            }
         }
-  
-        .texto-catering {
-          @include responsive-font(16px, 18px);
-        }
-      }
     }
-  }
-  
-  @media (max-width: 768px) {
-    main {
-      padding: 10px;
-  
-      .container-catering, .conteiner-catering {
-        & > .containerimg-c img {
-          max-height: 150px;
+}
+
+@media (max-width: 768px) {
+    .container-catering {
+        .catering-content {
+            .containerimg-c {
+                img {
+                    width: 200px;
+                }
+            }
+
+            .texto-catering {
+                font-size: 20px;
+            }
         }
-  
-        .texto-catering {
-          @include responsive-font(14px, 16px);
-        }
-      }
     }
-  }
-  
-  @media (max-width: 576px) {
-    main {
-      padding: 5px;
-  
-      .container-catering, .conteiner-catering {
-        & > .containerimg-c img {
-          max-height: 100px;
+}
+
+@media (max-width: 576px) {
+    .container-catering {
+        .catering-content {
+            flex-direction: column;
+            align-items: center;
+
+            .containerimg-c {
+                img {
+                    width: 150px;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .texto-catering {
+                font-size: 18px;
+            }
         }
-  
-        .texto-catering {
-          @include responsive-font(12px, 14px);
-        }
-      }
     }
-  }
+}
   
   // Contacto
   .container-contacto {
     padding: 20px;
     box-sizing: border-box;
-  }
-  
-  .contact-form-section {
-    margin-bottom: 20px;
-  }
-  
-  .contact-form-section h2 {
     text-align: center;
+}
+
+.contact-form-section {
+    margin-bottom: 20px;
+}
+
+.contact-form-section h2 {
     margin-bottom: 20px;
     @include responsive-font(24px, 32px);
-  }
-  
-  .contact-form {
+}
+
+.contact-form {
     @include flex-center(column, center, flex-start);
     max-width: 600px;
     margin: 0 auto;
-  }
-  
-  .contact-form label {
+}
+
+.contact-form label {
     @include responsive-font(16px, 18px);
     margin-bottom: 5px;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
+}
+
+.contact-form input,
+.contact-form textarea {
     width: 100%;
     margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
-  }
+    resize: none;
+}
 
+.whatsapp-link {
+    color: #25D366;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    &:hover {
+        text-decoration: underline; 
+    }
+}
 
+.container-iframe {
+    margin: 20px 0;
 
+    iframe {
+        width: 50%;
+        height: 300px;
+        border: none;
+    }
+}
 
+//footer
+
+  .footer-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    padding: 10px; 
+
+.footer-logo {
+    margin-bottom: 5px;
+    text-align: center; 
+    img {
+        max-width: 100px; 
+        height: auto; 
+    }
+}
+
+.footer-contact {
+    text-align: center; 
+    p {
+        margin: 2px 0; 
+        a {
+            color: #25D366; 
+            text-decoration: none; 
+            &:hover {
+                text-decoration: underline; 
+            }
+        }
+    }
+}
+}
