@@ -41,6 +41,32 @@ body {
     color: #000;
     @include responsive-font(20px, 26px);
   }
+
+  .navbar {
+    display: none; 
+}
+
+
+@media (max-width: 992px) {
+    
+    .menu {
+        display: none; 
+    }
+
+    
+    .navbar {
+      display: flex; 
+  }
+
+  
+  .navbar-toggler {
+      margin-left: 0; 
+  }
+
+  .navbar-collapse {
+      justify-content: flex-start; 
+  }
+}
   
   h1 {
     text-align: center;
@@ -144,7 +170,7 @@ body {
             }
 
             button {
-                width: 100%; // Ajusta el ancho del botón
+                width: 100%; 
                 padding: 10px;
                 border: none;
                 border-radius: 5px;
@@ -155,6 +181,114 @@ body {
             }
         }
     }
+}
+
+//Media queries para index
+@media (min-width: 993px) {
+  .menu {
+      display: flex;
+      justify-content: center;
+  }
+
+  .navbar {
+      display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .menu {
+      display: none;
+  }
+
+  .navbar {
+      display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu {
+      display: none;
+  }
+
+  .navbar {
+      display: block;
+  }
+}
+
+.content-section {
+  padding: 20px;
+}
+
+.imagen-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.imagen-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.imagen-grid-dos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.imagen-grid-dos img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.contenedor-desayuno {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imagen-desayuno-i img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 992px) {
+  .content-section {
+      padding: 10px;
+  }
+
+  .imagen-grid {
+      grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-section {
+      padding: 5px;
+  }
+
+  .imagen-grid-dos {
+      grid-template-columns: 1fr;
+  }
+
+  .contenedor-desayuno {
+      flex-direction: column;
+      text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .text-boton input[type="button"] {
+      width: 100%;
+      padding: 10px;
+  }
+
+  .footer-container {
+      flex-direction: column;
+      text-align: center;
+  }
 }
 
   
@@ -225,6 +359,87 @@ body {
     height: auto;
     border-radius: 5px;
   }
+
+  //Media queries de catering
+
+  @media (min-width: 993px) {
+    .menu {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .menu {
+        display: none;
+    }
+
+    .navbar {
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    .menu {
+        display: none;
+    }
+
+    .navbar {
+        display: block;
+    }
+}
+
+.container-catering {
+    padding: 20px;
+}
+
+.containerimg-c {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.containerimg-c img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.texto-catering {
+    padding: 10px;
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    .container-catering {
+        padding: 10px;
+    }
+
+    .containerimg-c {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-catering {
+        padding: 5px;
+    }
+
+    .containerimg-c {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
   
   // Desayunos y meriendas
   .main-desayuno {
@@ -254,57 +469,80 @@ body {
       }
     }
   }
-  
-  @media (max-width: 992px) {
-    .main-desayuno {
-      padding: 15px;
+
+  //Media queries desayunos y meriendas
+  @media (min-width: 993px) {
+    .menu {
+        display: flex;
+        justify-content: center;
     }
-  
+
+    .navbar {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .menu {
+        display: none;
+    }
+
+    .navbar {
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    .menu {
+        display: none;
+    }
+
+    .navbar {
+        display: block;
+    }
+}
+
+.main-desayuno {
+    padding: 20px;
+}
+
+.sectiondesayuno {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sectiondesayuno img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 992px) {
+    .main-desayuno {
+        padding: 15px;
+    }
+
     .sectiondesayuno {
-      @include flex-center(column, flex-start, flex-start);
-  
-      & > div {
-        margin-right: 0;
         margin-bottom: 15px;
-      }
-  
-      p {
-        @include responsive-font(18px, 20px);
-      }
     }
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .main-desayuno {
-      padding: 10px;
+        padding: 10px;
     }
-  
+
     .sectiondesayuno {
-      & > div {
         margin-bottom: 10px;
-      }
-  
-      p {
-        @include responsive-font(16px, 18px);
-      }
     }
-  }
-  
-  @media (max-width: 576px) {
-    .main-desayuno {
-      padding: 5px;
+}
+
+@media (max-width: 576px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
     }
+}
   
-    .sectiondesayuno {
-      & > div {
-        margin-bottom: 5px;
-      }
-  
-      p {
-        @include responsive-font(14px, 16px);
-      }
-    }
-  }
   
   // Catering
   .container-catering {
@@ -336,57 +574,7 @@ body {
 
   
   // Media queries catering
-  @media (max-width: 992px) {
-    .container-catering {
-        .catering-content {
-            .containerimg-c {
-                img {
-                    width: 250px;
-                }
-            }
-
-            .texto-catering {
-                font-size: 22px;
-            }
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    .container-catering {
-        .catering-content {
-            .containerimg-c {
-                img {
-                    width: 200px;
-                }
-            }
-
-            .texto-catering {
-                font-size: 20px;
-            }
-        }
-    }
-}
-
-@media (max-width: 576px) {
-    .container-catering {
-        .catering-content {
-            flex-direction: column;
-            align-items: center;
-
-            .containerimg-c {
-                img {
-                    width: 150px;
-                    margin-bottom: 10px;
-                }
-            }
-
-            .texto-catering {
-                font-size: 18px;
-            }
-        }
-    }
-}
+  
   
   // Contacto
   .container-contacto {
@@ -446,6 +634,114 @@ body {
     }
 }
 
+//Media queries contacto
+@media (min-width: 993px) {
+  .menu {
+      display: flex;
+      justify-content: center;
+  }
+
+  .navbar {
+      display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .menu {
+      display: none;
+  }
+
+  .navbar {
+      display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu {
+      display: none;
+  }
+
+  .navbar {
+      display: block;
+  }
+}
+
+.container-contacto {
+  padding: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.contact-form button {
+  padding: 10px;
+  background-color: #eee;
+  color: $colortexto;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #ccc;
+}
+
+.texto-contacto {
+  margin: 20px 0;
+}
+
+.whatsapp-link {
+  color: #25d366;
+  text-decoration: none;
+}
+
+.whatsapp-link:hover {
+  text-decoration: underline;
+}
+
+.container-iframe {
+  margin: 20px 0;
+}
+
+iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+}
+
+@media (max-width: 992px) {
+  .container-contacto {
+      padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-contacto {
+      padding: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-container {
+      flex-direction: column;
+      text-align: center;
+  }
+}
+
 //footer
 
   .footer-container {
@@ -477,3 +773,5 @@ body {
     }
 }
 }
+
+//Media queries footer
